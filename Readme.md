@@ -46,11 +46,7 @@ The plugin returns a few methods when you call it:
 **mysql.db**
 The `database` paremeter is required everything else is optional.
 ```js
-// api
-var db = mysql.db(database, port, host, protocol);
-```
-```js
-// example - with the defaults
+// example - with the default values
 var db = mysql.db({
 	host     : 'localhost',
 	user     : 'root',
