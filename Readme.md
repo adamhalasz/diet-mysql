@@ -29,7 +29,7 @@ var db = mysql.db({ database:'test' });
 app.get('/', db, function($){
     $.db.query('SELECT * FROM accounts', function(err, accounts){
 		$.data.accounts = accounts;
-		$.html();
+		$.json();
 	});
 });
 ```
