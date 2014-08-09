@@ -1,13 +1,12 @@
 {
   "name": "diet-mysql",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A MySQL module for Diet",
   "homepage": "http://github.com/adamhalasz/diet-mysql/",
   "keywords": [
-    "mongodb",
+    "mysql",
+    "sql",
     "database",
-    "nosql",
-    "mongo",
     "plugin",
     "diet plugin",
     "diet",
@@ -29,7 +28,8 @@
     "url": "http://adamhalasz.com/"
   },
   "dependencies": {
-    "mysql": ">=2.4.1"
+    "mysql": ">=2.4.1",
+    "sugar": ">=1.4.1"
   },
   "main": "index.js",
   "engines": {

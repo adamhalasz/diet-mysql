@@ -1,3 +1,5 @@
+// Dependencies
+require('sugar')
 var mysql = require('mysql');
 
 module.exports.class = mysql;
