@@ -1,6 +1,6 @@
 {
   "name": "diet-mysql",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "description": "A MySQL module for Diet",
   "homepage": "http://github.com/adamhalasz/diet-mysql/",
   "keywords": [

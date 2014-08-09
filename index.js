@@ -5,7 +5,7 @@ var mysql = require('mysql');
 module.exports.class = mysql;
 module.exports.db = function(options){
 	var options = options || {};
-	var config = merge({
+	var config = Object.merge({
 		database : options.database || 'test',
 		host	 : options.host 	|| 'localhost',
 		user	 : options.user		|| 'root',
