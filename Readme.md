@@ -18,14 +18,20 @@ npm install diet-mysql
 // Require Diet
 require('diet');
 
-// New Domain
-app = new Domain('http://example.com/');
+// Create App
+var app = new App();
 
-// MySQL
+// Configure Domain
+app.domain('http://example.com/');
+
+// Setup MySQL
 var mysql = app.plugin('diet-mysql');
 var db = mysql.db({ database:'test' });
 
-// Use in Route
+// Start the Application
+app.start();
+
+// Listen on GET / and use the `db` plugin for this route
 app.get('/', db, function($){
     $.db.query('SELECT * FROM accounts', function(err, accounts){
 		$.data.accounts = accounts;
