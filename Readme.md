@@ -16,34 +16,34 @@ npm install diet-mysql
 ## **Usage**
 ```js
 // Require Diet
-require('diet');
+var server = require('diet')
 
 // Create App
-var app = new App();
+var app = new server()
 
 // Configure Domain
-app.domain('http://example.com/');
+app.domain('http://example.com/')
 
 // Setup MySQL
-var mysql = app.plugin('diet-mysql');
-var db = mysql.db({ database:'test' });
+var mysql = app.plugin('diet-mysql')
+var db = mysql.db({ database:'test' })
 
 // Start the Application
-app.start();
+app.start()
 
 // Listen on GET / and use the `db` plugin for this route
 app.get('/', db, function($){
     $.db.query('SELECT * FROM accounts', function(err, accounts){
-		$.data.accounts = accounts;
-		$.html();
-	});
-});
+		$.data.accounts = accounts
+		$.html()
+	})
+})
 ```
 
 ## **One Liner**
 If you only need to use one database, you can shorten your call to:
 ```js
-var db = app.plugin('diet-mysql').db({ database: 'test' });
+var db = app.plugin('diet-mysql').db({ database: 'test' })
 ```
 
 ## **Methods**
@@ -53,7 +53,7 @@ The plugin returns a few methods when you call it:
 The `database` paremeter is required everything else is optional.
 ```js
 // api
-var db = mysql.db(database, port, host, protocol);
+var db = mysql.db(database, port, host, protocol)
 ```
 ```js
 // example - with the defaults
@@ -62,7 +62,7 @@ var db = mysql.db({
 	user     : 'root',
 	password : '',
 	database : 'test'
-});
+})
 ```
 
 **mysql.class**
