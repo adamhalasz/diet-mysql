@@ -2,8 +2,8 @@
 require('sugar')
 var mysql = require('mysql')
 
-exports.class = mysql
-exports.db = function(options){
+module.exports.class = mysql
+module.exports.db = function(options){
 	var options = options || {}
 	
 	var config = Object.merge({
@@ -24,11 +24,15 @@ exports.db = function(options){
 			if(error){
 				throw new Error(error)
 			} else {
-				$.onEnd(function(callback){
-					connection.end()
-					callback()
-				})
-				$.return(connection)
+				if(typeof $ == 'object'){
+					$.onEnd(function(callback){
+						connection.end()
+						callback()
+					})
+					$.return(connection)
+				} else {
+					$(connection);
+				}
 			}
 		})
 	}
