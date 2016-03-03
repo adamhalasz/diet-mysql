@@ -45,7 +45,7 @@ app.get('/', function($){
 ## **API**
 The plugin returns a few methods when you call it:
 
-### **mysql.connect(*options*)** (function)
+### **mysql.connect(*options*)** - function
 The `app` and `database` parameters are required everything else is optional.
 
 ```js
@@ -60,14 +60,14 @@ mysql.connect({
 })
 ```
 
-### **mysql.class** (object)
+### **mysql.class** - object
 This is a shortcut for the return values of `require('mysql')` inside `diet-mysql`.
 
 
 ## **One Liner**
 If you only need to use one database, you can shorten your call to:
 ```js
-require('diet-mysql').connect({ database: 'test' })
+require('diet-mysql').connect({ app: app, database: 'test' })
 ```
 
 # License
