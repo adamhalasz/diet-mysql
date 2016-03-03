@@ -2,12 +2,6 @@
 A diet plugin for the most popular mysql nodejs driver:
 [https://github.com/felixge/node-mysql][1]
 
-## **Features**
-- Simplifies connecting to mysql
-- Creates a mysql wrapper for diet that can be used in diet routes.
-- the `connection.end()` is called automatically on `$.end()` so you don't have to.
-- Very small, just 20kb
-
 ## **Install**
 ```
 npm install diet-mysql
@@ -43,22 +37,17 @@ app.get('/', function($){
 })
 ```
 
-## **One Liner**
-If you only need to use one database, you can shorten your call to:
-```js
-require('diet-mysql').connect({ database: 'test' })
-```
+## **Features**
+- Simplifies connecting to mysql
+- Creates a mysql wrapper for diet that can be used in diet routes.
+- the `connection.end()` is called automatically on `$.end()` so you don't have to.
+- Very small, just 20kb
 
-## **Methods**
+## **API**
 The plugin returns a few methods when you call it:
 
-**mysql.db**
+### **mysql.connect(*options*)** (function)
 The `database` parameter is required everything else is optional.
-
-```js
-// api
-var db = mysql.db(database, port, host, protocol)
-```
 
 ```js
 // example - with the defaults
@@ -71,8 +60,15 @@ mysql.connect({
 })
 ```
 
-**mysql.class**
+### **mysql.class** (object)
 This is a shortcut for the return values of `require('mysql')` inside `diet-mysql`.
+
+
+## **One Liner**
+If you only need to use one database, you can shorten your call to:
+```js
+require('diet-mysql').connect({ database: 'test' })
+```
 
 # License
 Copyright (c) 2014 Halász Ádám <mail@adamhalasz.com>
