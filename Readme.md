@@ -1,6 +1,5 @@
 # **diet-mysql**
-A diet plugin for the most popular mysql nodejs driver:
-[https://github.com/felixge/node-mysql][1]
+Diet middleware for the [mysql][1] module:
 
 ## **Install**
 ```
@@ -20,7 +19,7 @@ var mysql = require('diet-mysql')
 
 // Register MySQL Connection
 mysql.connect({ 
-	app        : app, 
+	app        : app,          
 	database   : 'your_project',
 	host       : 'localhost',
 	user       : 'root',
@@ -47,16 +46,17 @@ app.get('/', function($){
 The plugin returns a few methods when you call it:
 
 ### **mysql.connect(*options*)** (function)
-The `database` parameter is required everything else is optional.
+The `app` and `database` parameters are required everything else is optional.
 
 ```js
 // example - with the defaults
 mysql.connect({
-	host      : 'localhost',
-	user      : 'root',
-	password  : '',
-	database  : 'test',
-	namespace : 'mysql'
+	app		  : app,           // your diet server instance
+	host      : 'localhost',   // the mysql host address
+	user      : 'root',        // the mysql username
+	password  : '',            // the mysql password for the username
+	database  : 'test',        // the mysql database to connect to
+	namespace : 'mysql'        // the namespace to use within diet routes in the signal ($.mysql)
 })
 ```
 
