@@ -1,6 +1,6 @@
 {
   "name": "diet-mysql",
-  "version": "1.0.3",
+  "version": "2.0.0",
   "description": "A MySQL module for Diet",
   "homepage": "http://github.com/adamhalasz/diet-mysql/",
   "keywords": [
@@ -28,11 +28,10 @@
     "url": "http://adamhalasz.com/"
   },
   "dependencies": {
-    "mysql": ">=2.4.1",
-    "sugar": ">=1.4.1"
+    "mysql": ">=2.10.2"
   },
   "main": "index.js",
   "engines": {
-    "node": ">=0.8.21"
+    "node": ">=5.7.0"
   }
 }
