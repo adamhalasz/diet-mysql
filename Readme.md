@@ -19,8 +19,7 @@ npm install diet-mysql
 var server = require('diet')
 
 // Create App
-var app = server()
-    app.listen(6500)
+var app = server().listen(6500)
 
 // Require Diet MySQL Module
 var mysql = require('diet-mysql')
