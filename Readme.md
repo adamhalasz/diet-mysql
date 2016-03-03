@@ -4,7 +4,7 @@ A diet plugin for the most popular mysql nodejs driver:
 
 ## **Features**
 - Simplifies connecting to mysql
-- Creates a mysql wrapper for diet that can be used in local diet routes.
+- Creates a mysql wrapper for diet that can be used in diet routes.
 - the `connection.end()` is called automatically on `$.end()` so you don't have to.
 - Very small, just 20kb
 
